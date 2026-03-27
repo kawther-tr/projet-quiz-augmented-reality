@@ -1,0 +1,54 @@
+body {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    font-family: Arial;
+}
+
+#quiz {
+    margin-top: 100px;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 15px;
+    width: 250px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #38bdf8;
+}
+#toast {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    background: #222;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+/* visible */
+#toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-20px);
+}
+
+/* couleurs */
+#toast.correct {
+    background: green;
+}
+
+#toast.wrong {
+    background: red;
+}
